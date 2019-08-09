@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/uno"
+          android:icon="@android:drawable/ic_menu_share" android:title="Uno" app:showAsAction="ifRoom"/>
+    <item android:title="Dos" android:id="@+id/dos" android:icon="@android:drawable/ic_dialog_email"
+          app:showAsAction="ifRoom"/>
+    <item android:title="Tres" android:id="@+id/tres"/>
+</menu>

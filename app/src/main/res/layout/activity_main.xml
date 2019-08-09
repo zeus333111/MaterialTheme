@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/menu"
+            app:title="Ejemplo de estilos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="?toolbarStyle"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="normal"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="borderles"
+            app:layout_constraintTop_toBottomOf="@id/normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+    />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text button"
+            app:layout_constraintTop_toBottomOf="@id/colored"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/borderless"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/group">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/uno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="uno"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/dos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dos"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/tres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tres"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/group"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:icon="@android:drawable/ic_menu_add"
+            android:text="Extended"
+    />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/fab_text"
+            app:layout_constraintLeft_toRightOf="@id/fab_text"
+            android:src="@android:drawable/ic_menu_call"
+            app:fabSize="normal"
+    />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/fab_n"
+            app:layout_constraintBottom_toBottomOf="@id/fab_n"
+            app:layout_constraintLeft_toRightOf="@id/fab_n"
+            android:src="@android:drawable/ic_btn_speak_now"
+            app:fabSize="mini"
+    />
+
+    <com.google.android.material.chip.Chip
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="action"
+            app:layout_constraintTop_toBottomOf="@id/fab_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <com.google.android.material.chip.Chip
+            android:id="@+id/entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="entry"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            app:layout_constraintTop_toBottomOf="@id/fab_text"
+            app:layout_constraintLeft_toRightOf="@id/action"
+    />
+
+    <com.google.android.material.chip.Chip
+            android:id="@+id/filter_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            app:layout_constraintTop_toBottomOf="@id/fab_text"
+            app:layout_constraintLeft_toRightOf="@id/entry"
+    />
+
+    <com.google.android.material.chip.Chip
+            android:id="@+id/choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choise"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIcon="@android:drawable/ic_btn_speak_now"
+            app:layout_constraintTop_toBottomOf="@id/fab_text"
+            app:layout_constraintLeft_toRightOf="@id/filter_chip"
+    />
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/action"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    >
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bordered"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_border"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="?textInputStyle"
+    >
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Normal"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/til_normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    >
+        <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bnv_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:gravity="bottom"
+                app:fabAlignmentMode="center"
+                app:menu="@menu/bottom_nav"
+                style="?bottomAppBarStyle"
+        />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/bnv_bottom"
+                android:src="@android:drawable/ic_lock_power_off"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/butnav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav"
+            app:layout_constraintTop_toBottomOf="@id/coordinator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/butnav"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/butnav"
+            app:layout_constraintLeft_toRightOf="@id/checkbox"
+    />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/butnav"
+            app:layout_constraintLeft_toRightOf="@id/radio"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
